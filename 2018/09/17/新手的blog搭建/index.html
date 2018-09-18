@@ -549,6 +549,23 @@ hexo d
 <!-- City版安装代码已完成 -->
     
     
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        // id: "新手的blog搭建", // 可选。默认为 location.href
+        owner: 'presec',
+        repo: 'presec.github.io',
+        oauth: {
+            client_id: '4188eec4528ef54d7bdf',
+            client_secret: '76a0f5cb5300e763e24b98069fd3fbe1533ff65d',
+        },
+    })
+    gitment.render('container')
+
+</script>
+
     <!-- partial('_partial/comment/changyan') -->
     <!--PC版-->
 
