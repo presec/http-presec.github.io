@@ -266,7 +266,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">2.6k</span>阅读时长: <span class="post-count reading-time">9 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">1.9k</span>阅读时长: <span class="post-count reading-time">7 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -395,8 +395,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>##本地搭建</p>
-<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>在 Windows 环境下安装 Node.js 直接下载安装，无脑下一步就行了<br><img src="http://7xrwkh.com1.z0.glb.clouddn.com/image-nodeJs-dl.png" alt=""></p>
+        <h2 id="本地搭建"><a href="#本地搭建" class="headerlink" title="本地搭建"></a>本地搭建</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>在 Windows 环境下安装 Node.js 直接下载安装，无脑下一步就行了<br><img src="http://7xrwkh.com1.z0.glb.clouddn.com/image-nodeJs-dl.png" alt=""></p>
 <h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>去Git官网根据你的电脑参数，下载对应版本。</p>
 <p>下载完成，通过在命令行输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git version</span><br></pre></td></tr></table></figure>
@@ -422,8 +421,8 @@ height:50vh;
 <p><img src="http://onq81n53u.bkt.clouddn.com/YY%E5%9B%BE%E7%89%8720180110175140.jpg" alt=""></p>
 <h2 id="将博客部署到Github-Pages上"><a href="#将博客部署到Github-Pages上" class="headerlink" title="将博客部署到Github Pages上"></a>将博客部署到Github Pages上</h2><h3 id="注册Github账户"><a href="#注册Github账户" class="headerlink" title="注册Github账户"></a>注册Github账户</h3><p>访问<a href="https://github.com/" target="_blank" rel="noopener">Github首页</a></p>
 <p>点右上角<a href="https://github.com/" target="_blank" rel="noopener">Sign Up</a>，注册自己的账户</p>
-<p>###创建项目代码库<br>注册完登陆后，点击New repository。<br>创建要点如下：<br>三、配置SSH密钥<br>第一步、查看本机是否存在SSH keys,打开Git Bash,并运行:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/. ssh</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">![](https://pic4.zhimg.com/80/v2-7e75604339c865105d11100d9b464f73_hd.jpg)</span><br><span class="line">这样显示是不存在ssh keys.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">###创建新的SSH密钥(keys)</span><br></pre></td></tr></table></figure>
+<h3 id="创建项目代码库"><a href="#创建项目代码库" class="headerlink" title="创建项目代码库"></a>创建项目代码库</h3><p>注册完登陆后，点击New repository。<br>创建要点如下：<br>三、配置SSH密钥<br>第一步、查看本机是否存在SSH keys,打开Git Bash,并运行:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/. ssh</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">![](https://pic4.zhimg.com/80/v2-7e75604339c865105d11100d9b464f73_hd.jpg)</span><br><span class="line">这样显示是不存在ssh keys.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 创建新的SSH密钥(keys)</span><br></pre></td></tr></table></figure>
 <p>$ssh-keygen -t rsa -C “<a href="mailto:xxxx@xxx.com" target="_blank" rel="noopener">xxxx@xxx.com</a>“<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">Generating public/private rsa key pair.</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter file in which to save the key </span><br><span class="line">(/c/Users/you/.ssh/id_rsa):</span><br></pre></td></tr></table></figure>
 <p>这一步直接回车，则将密钥按默认文件进行存储。</p>
@@ -434,7 +433,7 @@ height:50vh;
 <p>Enter same passphrase again: [Type passphrase again] &lt;再次输入密码&gt;</p>
 <p>输入完成之后，屏幕会显示如下信息：</p>
 <p><img src="https://p2.cdn.img9.top/ipfs/Qmbf7X4LU8HrvegnB1y87U8T8RjQw3tSjsRPPvnkwVU7nc?2.PNG" alt=""></p>
-<p>###在GitHub账户中添加你的公钥<br>运行如下命令，将公钥的内容复制到系统粘贴板(clipboard)中。</p>
+<h3 id="在GitHub账户中添加你的公钥"><a href="#在GitHub账户中添加你的公钥" class="headerlink" title="在GitHub账户中添加你的公钥"></a>在GitHub账户中添加你的公钥</h3><p>运行如下命令，将公钥的内容复制到系统粘贴板(clipboard)中。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
 <p>接着：</p>
 <p>登陆GitHub,进入你的Account Settings.</p>
@@ -443,7 +442,7 @@ height:50vh;
 <p><img src="http://7xrwkh.com1.z0.glb.clouddn.com/SSH-github-setting-SSH.png" alt=""></p>
 <p>3.粘贴密钥，添加即可</p>
 <p><img src="http://7xrwkh.com1.z0.glb.clouddn.com/SSH-github-SSH-OK.png" alt=""></p>
-<p>###测试<br>可以输入下面的命令，看看设置是否成功,不要修改任何命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>可以输入下面的命令，看看设置是否成功,不要修改任何命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
 <p>如果是下面的反馈：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host &apos;github.com (207.97.227.239)&apos; can&apos;t be established.</span><br><span class="line">RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span><br><span class="line">Are you sure you want to continue connecting (yes/no)?</span><br></pre></td></tr></table></figure>
 <p>输入yes就好，然后会看到：</p>
@@ -468,7 +467,7 @@ height:50vh;
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <p>这样，你再执行hexo g -d，你的博客就部署到Github上了。</p>
 <p>第六步、在浏览器上输入自己的主页地址presec.github.io<br>现在就可以通过这个地址访问到你的博客了</p>
-<p>###美化自己博客<br>现在自己的博客并不好看，这就需要我们找一个合适自己的主题给我们使用，我们只需把主题克隆过来，然后通过修改配置文件即可达到我们所需要的效果。</p>
+<h3 id="美化自己博客"><a href="#美化自己博客" class="headerlink" title="美化自己博客"></a>美化自己博客</h3><p>现在自己的博客并不好看，这就需要我们找一个合适自己的主题给我们使用，我们只需把主题克隆过来，然后通过修改配置文件即可达到我们所需要的效果。</p>
 <p>那么我们应该怎么修改呢？</p>
 <p>一、进入Hexo的官网主题专栏</p>
 <p><img src="http://7xrwkh.com1.z0.glb.clouddn.com/themes.png" alt=""></p>
@@ -485,15 +484,6 @@ height:50vh;
 <p>六、如果效果满意，将它部署到Github上<br>打开Hexo文件夹，右键Git Bash，输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean   (必须要，不然有时因为缓存问题，服务器更新不了主题)</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
-<p>七、打开自己的主页，即可看到修改后的效果<br>更多修改效果请查看对应主题的说明文档，点击此查看本主题(Next)对应的说明文档。</p>
-<p>在博客写文章<br>一、用hexo发表新文章<br>$ hexo n “文章标题”<br>其中 我的家 为文章标题，执行命令 hexo n “我的家” 后，会在项目 \Hexo\source_posts 中生成 我的家.md文件，用编辑器打开编写即可。</p>
-<p>当然，也可以直接在\Hexo\source_posts中新建一个md文件，我就是这么做的。 写完后，推送到服务器上，执行以下命令即可在我们的站点看到新的文章。</p>
-<p>$ hexo g #生成<br>$ hexo d #部署 # 可与hexo g合并为 hexo d -g<br>二、用Markdown写文章<br>我们注意到在 \Hexo\source_posts 文件夹下存放着我们的文章，它们的格式都是以.md格式结尾的，没错，Hexo也是支持Markdown语法的，所以当我们需要写具有格式化的文章时，我们可以使用支持Markdown语法的编辑器进行文章编译，然后保存文件到 \Hexo\source_posts 文件夹下即可。</p>
-<p>复制进去之后，只要执行</p>
-<p>$ hexo d -g<br>推送到我们的Github仓库即可。</p>
-<p>那么什么是Markdown？<br>Markdown 是一种轻量级的「标记语言」，它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown 的语法十分简单。常用的标记符号也不超过十个，这种相对于更为复杂的HTML 标记语言来说，Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦熟悉这种语法规则，会有一劳永逸的效果。</p>
-<p>Markdown有什么优点？<br>专注你的文字内容而不是排版样式。<br>轻松的导出 HTML、PDF 和本身的 .md 文件。<br>纯文本内容，兼容所有的文本编辑器与字处理软件。<br>可读，直观。适合所有人的写作语言。<br>我该用什么工具？<br>Windows下可以使用 MarkdownPad2。<br>在 Mac OS X 上，我建议你用 Mou 这款免费且十分好用的 Markdown 编辑器。<br>Web 端上，我强烈推荐 简书 这款产品。<br>关于Markdown的更多资料可以查看如下：</p>
-<p>认识与入门 Markdown<br>Markdown入门指南<br>将自己的域名关联到Github Pages上<br>很多朋友创建了自己的博客之后会选择买一个属于自己的域名，然后将自己域名绑定到自己的Github Pages博客上，其实这也并不难，只要你有个域名。</p>
 <p>一、购买域名<br>如果你不是很有钱，在阿里云上，你只要几块钱就可以买到一个域名。</p>
 <p>选择你喜欢的域名，然后购买即可。</p>
 <p>二、配置CNAME文件<br>在 \hexo\source 文件夹下创建文件 CNAME （新建记事本文件命名CNAME，然后打开）</p>
@@ -516,7 +506,7 @@ height:50vh;
             <p>原文作者：<a href="http://yoursite.com"></a>
             <p>原文链接：<a href="http://yoursite.com/2018/09/17/新手的blog搭建/">http://yoursite.com/2018/09/17/新手的blog搭建/</a>
             <p>发表日期：<a href="http://yoursite.com/2018/09/17/新手的blog搭建/">September 17th 2018, 8:58:15 pm</a>
-            <p>更新日期：<a href="http://yoursite.com/2018/09/17/新手的blog搭建/">September 18th 2018, 10:59:42 am</a>
+            <p>更新日期：<a href="http://yoursite.com/2018/09/17/新手的blog搭建/">September 18th 2018, 1:36:13 pm</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -627,7 +617,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Node-js"><span class="toc-number">1.</span> <span class="toc-text">安装Node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Git"><span class="toc-number">2.</span> <span class="toc-text">安装Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo安装"><span class="toc-number">3.</span> <span class="toc-text">Hexo安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo初始化配置"><span class="toc-number">4.</span> <span class="toc-text">Hexo初始化配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将博客部署到Github-Pages上"><span class="toc-number"></span> <span class="toc-text">将博客部署到Github Pages上</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#注册Github账户"><span class="toc-number">1.</span> <span class="toc-text">注册Github账户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置用户信息"><span class="toc-number">2.</span> <span class="toc-text">设置用户信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将本地的Hexo文件更新到Github的库中"><span class="toc-number">3.</span> <span class="toc-text">将本地的Hexo文件更新到Github的库中</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#本地搭建"><span class="toc-number">1.</span> <span class="toc-text">本地搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Node-js"><span class="toc-number">1.1.</span> <span class="toc-text">安装Node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Git"><span class="toc-number">1.2.</span> <span class="toc-text">安装Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo安装"><span class="toc-number">1.3.</span> <span class="toc-text">Hexo安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo初始化配置"><span class="toc-number">1.4.</span> <span class="toc-text">Hexo初始化配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将博客部署到Github-Pages上"><span class="toc-number">2.</span> <span class="toc-text">将博客部署到Github Pages上</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#注册Github账户"><span class="toc-number">2.1.</span> <span class="toc-text">注册Github账户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建项目代码库"><span class="toc-number">2.2.</span> <span class="toc-text">创建项目代码库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在GitHub账户中添加你的公钥"><span class="toc-number">2.3.</span> <span class="toc-text">在GitHub账户中添加你的公钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试"><span class="toc-number">2.4.</span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置用户信息"><span class="toc-number">2.5.</span> <span class="toc-text">设置用户信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将本地的Hexo文件更新到Github的库中"><span class="toc-number">2.6.</span> <span class="toc-text">将本地的Hexo文件更新到Github的库中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#美化自己博客"><span class="toc-number">2.7.</span> <span class="toc-text">美化自己博客</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
