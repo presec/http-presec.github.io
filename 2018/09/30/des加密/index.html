@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>博客</title>
+    <title>DES加密 · 博客</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -77,6 +77,8 @@
 
     <link rel="preload" href= "/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href= "/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -201,14 +203,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Big pig hoof’s blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">DES加密</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Big pig hoof’s blog</a>
 </header>
@@ -227,17 +238,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/21.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Big pig hoof’s blog
-            <!-- 文章页  -->
+            DES加密
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -245,12 +256,49 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-                鹤鸣于九皋，声闻于野。
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "class note">class note</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">1.1k</span>阅读时长: <span class="post-count reading-time">4 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2018/09/30</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -351,170 +399,118 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/30/des加密/" >
-            
-                <span>DES加密</span>
-        </a>
-        <div class="abstract-content">
-            DES特点1.以64位为分组。64位明文输入，64位密文输出。
-2.加密和解密使用同一秘钥
-3.秘钥通常表示为64位数，但每个第8位用作奇偶校验，可以忽略。4.优点：
-效率高，算法简单，系统开销小
-适合加密大量数据
-明文长度和密文长度相等
-5.缺点：
-需要以安全方式进行秘钥交换
-秘钥管理复杂
-加密流程明文64位-&gt;初始置换IP-&gt;16轮加密变换-&gt;逆初始置换IP-1-&gt;密文
-明文64位-&gt;初始置换IPDES把明文以64位分组（不满64位则以0补足）后，把输入的64位按一定规则将数据打乱，例：
-58,50,42,34,26,18,10,2,
-60,52,44,...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "class note">class note</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/17/新手的blog搭建/" >
-            
-                <span>新手的blog搭建</span>
-        </a>
-        <div class="abstract-content">
-            本地搭建安装Node.js在 Windows 环境下安装 Node.js 直接下载安装，无脑下一步就行了
-安装Git去Git官网根据你的电脑参数，下载对应版本。
-下载完成，通过在cmd命令行输入
-1git version
-查看是否安装成功，有输出版本号说明安装成功。
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="DES特点"><a href="#DES特点" class="headerlink" title="DES特点"></a>DES特点</h1><p>1.以64位为分组。64位明文输入，64位密文输出。</p>
+<p>2.加密和解密使用同一秘钥</p>
+<p>3.秘钥通常表示为64位数，但每个第8位用作奇偶校验，可以忽略。<br>4.优点：</p>
+<p>效率高，算法简单，系统开销小</p>
+<p>适合加密大量数据</p>
+<p>明文长度和密文长度相等</p>
+<p>5.缺点：</p>
+<p>需要以安全方式进行秘钥交换</p>
+<p>秘钥管理复杂</p>
+<h1 id="加密流程"><a href="#加密流程" class="headerlink" title="加密流程"></a>加密流程</h1><p>明文64位-&gt;初始置换IP-&gt;16轮加密变换-&gt;逆初始置换IP-1-&gt;密文<br><img src="https://p2.cdn.img9.top/ipfs/QmazbSwtiLrFzETDRpZNUUZSkK3hsv8FsxiRC3TAE34Efk?2.png" alt=""></p>
+<h2 id="明文64位-gt-初始置换IP"><a href="#明文64位-gt-初始置换IP" class="headerlink" title="明文64位-&gt;初始置换IP"></a>明文64位-&gt;初始置换IP</h2><p>DES把明文以64位分组（不满64位则以0补足）后，把输入的64位按一定规则将数据打乱，例：</p>
+<pre><code>58,50,42,34,26,18,10,2,
+60,52,44,36,28,20,12,4,
+62,54,46,38,30,22,14,6,
+64,56,48,40,32,24,16,8,
+57,49,41,33,25,17, 9,1,
+59,51,43,35,27,19,11,3,
+61,53,45,37,29,21,13,5,
+63,55,47,39,31,23,15,7,
+</code></pre><p>即将输入的64位明文的第1位置换到第40位，第2位置换到第8位，第3位置换到第48位。以此类推，最后一位是原来的第7位。置换规则是规定的。将初始置换后的数据分为两部分L0,R0(各32位)，L0(Left)是置换后的数据的前32位，R0(Right)是置换后的数据的后32位。</p>
+<h2 id="初始置换IP-gt-16轮加密变换"><a href="#初始置换IP-gt-16轮加密变换" class="headerlink" title="初始置换IP-&gt;16轮加密变换"></a>初始置换IP-&gt;16轮加密变换</h2><p>1.将R0与48位的Key（子密钥）进行f函数运算<br>2.将R0投入下一轮循环，作为L1，以此类推共进行16次运算</p>
+<h2 id="F函数运算"><a href="#F函数运算" class="headerlink" title="F函数运算"></a>F函数运算</h2><h3 id="48位key（子密钥）的生成"><a href="#48位key（子密钥）的生成" class="headerlink" title="48位key（子密钥）的生成"></a>48位key（子密钥）的生成</h3><p>1.密钥的每一个字节的第八位为奇偶校验位，不参与运算，所以将密钥降至56位<br>2.将密钥分为A,B两部分，各28位例</p>
+<pre><code>57,49,41,33,25,17, 9, 1
+58,50,42,34,26,18,10, 2
+59,51,43,35,27,19,11, 3
+60,52,44,36,63,55,47,39
+31,23,15, 7,62,54,46,38
+30,22,14, 6,61,53,45,37
+29,21,13, 5,28,20,12, 4
+</code></pre><p>A0（28位）</p>
+<pre><code>57,49,41,33,25,17, 9
+ 1,58,50,42,34,26,18
+10, 2,59,51,43,35,27
+19,11, 3,60,52,44,36
+</code></pre><p>B0（28位)</p>
+<pre><code>63,55,47,39,31,23,15
+ 7,62,54,46,38,30,22
+14, 6,61,53,45,37,29
+21,1,3,5,28,20,12, 4
+</code></pre><p>3.将A,B两部分进行循环左移(根据轮数，将A和B分别循环左移1位或2位) 生成A1，B1</p>
+<p>例：<br><img src="https://p2.cdn.img9.top/ipfs/QmVXPFGvbrgQEDhgaJ4KEaDY84S4owhoxT9oo37YyikHuS?2.png" alt=""><br><img src="https://p3.cdn.img9.top/ipfs/QmS5VAKeUgmc81eT1jnzyVfm4yF7dLBEerdYPZengMpi3B?3.jpg" alt=""></p>
+<p>左移之后将A1,B1合并，去掉第9、18、22、25、35、38、43、54位，从56位变成48位后根据置换选择表（如下）生成48位的子秘钥K1。</p>
+<pre><code>14,17,11,24, 1, 5
+ 3,28,15, 6,21,10
+23,19,12, 4,26, 8
+16, 7,27,20,13, 2
+41,52,31,37,47,55
+30,40,51,45,33,48
+44,49,39,56,34,53
+46,42,50,36,29,32
+</code></pre><p>A1和B1再次经过循环左移变换，生成C2和D2，C2和D2合并，通过表生成子秘钥K2,以此类推共16轮</p>
+<h3 id="扩展置换"><a href="#扩展置换" class="headerlink" title="扩展置换"></a>扩展置换</h3><p>经过上面的步骤之后就产生了48位的key，但是32位的数据要与48位的key进行运算则需要将数据进行扩展置换扩展至48位</p>
+<p><img src="https://p4.cdn.img9.top/ipfs/QmRh1noA7N2ds4rTUeGkw3GwXauuA9VADrhqBufDZXRmDF?4.jpg" alt=""></p>
+<h3 id="S-盒代替"><a href="#S-盒代替" class="headerlink" title="S-盒代替"></a>S-盒代替</h3><p>经过扩展置换后已经是48位的数据，但是我们还需要将这个数据重新输入至下一轮循环（32位），而s盒就可以将48位的数据经过替代运算后形成32位数据以达到要求</p>
+<p>代替运算由8个不同的代替盒(S盒)完成。每个S-盒有6位输入，4位输出。</p>
+<p>所以48位的数据被分成8个6位的分组，每一个分组对应一个S-盒代替操作。</p>
+<p>经过S-盒代替，形成8个4位分组结果。<br><img src="https://p2.cdn.img9.top/ipfs/QmWeRaexZX7J9oesymBxRfMqBQp5SCXzbAsvHzk1hPrfmZ?2.png" alt=""></p>
+<p>S盒为4行，每行是打乱的0-15形成的矩阵。把输入的6位二进制数的头与尾合成一个两位二进制作为行号，中间的四位数作为列号，对应的一个0-15的数，再以这个数用四位二进制，来替代原始的6位二进制数 </p>
+<h3 id="P-盒置换"><a href="#P-盒置换" class="headerlink" title="P-盒置换"></a>P-盒置换</h3><p>将S-盒代替运算得到的32位输出作为P盒置换的输入，<br>将p盒的输入，一对一映射至相应的输出位，至此为f函数的输出结果<br><img src="https://p3.cdn.img9.top/ipfs/QmS5xo6KC5A8cxxwT9b9fHm1Vqo1GQJWeWhDmodAQuvgkB?3.png" alt=""><br>将输出结果与L0进行异或运算，将运算结果，投入下一轮循环中作为R1</p>
 
-Git GUI Here图形界面的Git操作
-Git Bash Here命令行。
-我们选择Git Bash Here。
-安装教程：如何在windows下安装GIT
-Git入门教程：Pro Git（中文版）
-Hexo安装桌面右键鼠标，点击Git Bash Here，输入npm命令即可安装
-npm install hexo-c...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "github+hexo">github+hexo</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
     
     <!-- paginator  -->
-    
-</main>
-            <!-- profile -->
+    <ul class="post-paginator">
+        <li class="next">
             
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src= /avatar/1.jpg >
-    <div class="profile-name">Big pig hoof</div>
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/09/17/新手的blog搭建/" title= "新手的blog搭建">
+                    <div class="prevTitle">新手的blog搭建</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
-    <div class="profile-signature">
-        无道人之短，无说己之长。行之苟有恒，久久自芬芳。
-    </div>
     
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        // id: "DES加密", // 可选。默认为 location.href
+        owner: 'presec',
+        repo: 'presec.github.io',
+        oauth: {
+            client_id: '4188eec4528ef54d7bdf',
+            client_secret: '76a0f5cb5300e763e24b98069fd3fbe1533ff65d',
+        },
+    })
+    gitment.render('container')
+
+</script>
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
     
-    <div class="profile-social">
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
     
 
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-                    <span>
-                        <a href= //perfect-time.xyz target="_black">黑桃⑨</a>
-                    </span>
-                
-            
-                
-                    <span>
-                        <a href= //www.google.com target="_black">friendB</a>
-                    </span>
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href = "/about" >ABOUT ME</a>
-        </div>
-    
-</div>
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
             
         </div>
         <footer class="footer footer-unloaded">
@@ -576,6 +572,24 @@ npm install hexo-c...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DES特点"><span class="toc-number">1.</span> <span class="toc-text">DES特点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#加密流程"><span class="toc-number">2.</span> <span class="toc-text">加密流程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#明文64位-gt-初始置换IP"><span class="toc-number">2.1.</span> <span class="toc-text">明文64位-&gt;初始置换IP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始置换IP-gt-16轮加密变换"><span class="toc-number">2.2.</span> <span class="toc-text">初始置换IP-&gt;16轮加密变换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#F函数运算"><span class="toc-number">2.3.</span> <span class="toc-text">F函数运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#48位key（子密钥）的生成"><span class="toc-number">2.3.1.</span> <span class="toc-text">48位key（子密钥）的生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#扩展置换"><span class="toc-number">2.3.2.</span> <span class="toc-text">扩展置换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#S-盒代替"><span class="toc-number">2.3.3.</span> <span class="toc-text">S-盒代替</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#P-盒置换"><span class="toc-number">2.3.4.</span> <span class="toc-text">P-盒置换</span></a></li></ol></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -709,6 +723,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
