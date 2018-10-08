@@ -351,10 +351,13 @@
                 <span>bugku write-up</span>
         </a>
         <div class="abstract-content">
-            web成绩查询先试试id=1正常输出，然后试试id=1’没有东西输出，再试试注释之后id=1’#又可以正常显示，这一题没有什么难点，也没有过滤，就是按照正常的步骤一步一步下来就行
+            web矛盾
+根据代码来看，num不能是数字字符，但是值要等于1php判断字符串以1开头即可判断等值，于是构造num=1’， 即可得到flag
+
+成绩查询先试试id=1正常输出，然后试试id=1’没有东西输出，再试试注释之后id=1’#又可以正常显示，这一题没有什么难点，也没有过滤，就是按照正常的步骤一步一步下来就行
 id=1&apos; order by 4#   //猜测列数，4列。
 id=-1&apos; union select 1,database(),2,3 #  //爆数据库名 skctf_flag
-id=-1&apos; union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema=d...
+id=-1&apos; union select 1,2,3,group_c...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
